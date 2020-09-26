@@ -1,0 +1,11 @@
+development:
+  public_key: |
+    -----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt/2cOvdg99xjlkdzQHkR
+    amifw+MBRNmuJDR/H6UDjK2MX+SWTyMOax/oaGC7DQVJoRT++w3JtZiAdr/yC0ft
+    6lku2dw8uQGhZqT2kCgtaDas9LrbeF8fM9NVuxfuqA2hbICNeePGZf+zZISq6aC3
+    NH0IcP/vqx8GOias2cN/OJHZbaluzXLHdInEock+smNbQtL+fadLmKCbVTpnoMII
+    R7n6fQ7tY6bsHKG1+mxKIinPfVk/GPFBXcuOzmjrEw85+sCI1luZnzBsMqp1i+uP
+    AxSPjANDuDt81uc4gG+1RADk1wkiAW4zLDP/Bo0AnR/+VRtnAwQvPvF+gspMBVhl
+    NwIDAQAB
+    -----END PUBLIC KEY-----

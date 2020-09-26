@@ -31,5 +31,8 @@ module Contacts
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.skip_auth = ENV.has_key?('SKIP_AUTH')
+    config.jwt = config_for(:jwt)
   end
 end
