@@ -1,0 +1,3 @@
+<%= @named_contact.inspect %>
+
+<%= button_to('Delete named contact', named_contacts_path(case_id: @named_contact.case_id), method: :delete) %>
