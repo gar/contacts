@@ -33,7 +33,14 @@ module Contacts
     config.generators.system_tests = nil
 
     config.skip_auth = ENV.has_key?('SKIP_AUTH') && (Rails.env.development? || Rails.env.test?)
-
     config.jwt = config_for(:jwt)
+
+    config.filter_parameters += %w[
+      named_contact.title
+      named_contact.first_name
+      named_contact.last_name
+      named_contact.mobile_number
+      named_contact.address
+    ]
   end
 end
