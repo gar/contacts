@@ -1,5 +1,5 @@
 class NamedContactsController < ApplicationController
-  before_action :set_named_contact_from_case_id, only: [:show, :new, :edit, :update, :destroy]
+  before_action :set_named_contact_from_case_id, except: [:create]
 
   def show
     if !@named_contact.persisted?
