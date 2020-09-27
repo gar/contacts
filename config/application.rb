@@ -42,5 +42,7 @@ module Contacts
       named_contact.mobile_number
       named_contact.address
     ]
+
+    config.active_job.queue_adapter = :good_job
   end
 end
