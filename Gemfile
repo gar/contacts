@@ -37,6 +37,7 @@ group :development, :test do
   gem 'coderay', '~> 1.1.3'
   gem 'guard-rspec', '~> 4.7.3', require: false
   gem 'rspec-rails', '~> 4.0.1'
+  gem 'simplecov', '~> 0.19.0', require: false
 end
 
 group :development do
