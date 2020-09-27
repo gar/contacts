@@ -1,6 +1,8 @@
 require_relative '../lib/case_constraint'
 
 Rails.application.routes.draw do
+  root 'named_contacts#show'
+
   constraints CaseConstraint.new do
     get    '/named_contacts',      to: 'named_contacts#show',    as: :named_contact
     get    '/named_contacts/new',  to: 'named_contacts#new',     as: :new_named_contact

@@ -1,44 +1,36 @@
-<%= form_with(model: named_contact, local: true, url: named_contacts_path(case_id: named_contact.case_id)) do |form| %>
-  <% if named_contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(named_contact.errors.count, "error") %> while saving this named contact:</h2>
+<% disabled ||= false %>
 
-      <ul>
-        <% named_contact.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div class="named-contact-card__details">
+  <div class="named-contact-card__name">
+    <div class="named-contact-card__title">
+      <div class="named-contact-card__field">
+        <%= form.label :title %>
+        <%= form.text_field :title, disabled: disabled %>
+      </div>
     </div>
-  <% end %>
-
-  <%= form.hidden_field :case_id %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <div class="named-contact-card__first-name">
+      <div class="named-contact-card__field">
+        <%= form.label :first_name %>
+        <%= form.text_field :first_name, disabled: disabled %>
+      </div>
+    </div>
+    <div class="named-contact-card__last-name">
+      <div class="named-contact-card__field">
+        <%= form.label :last_name %>
+        <%= form.text_field :last_name, disabled: disabled %>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+  <div class="named-contact-card__mobile">
+    <div class="named-contact-card__field">
+      <%= form.label :mobile_number %>
+      <%= form.text_field :mobile_number, disabled: disabled %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+  <div class="named-contact-card__address">
+    <div class="named-contact-card__field">
+      <%= form.label :address %>
+      <%= form.text_area :address, cols: 80, rows: 5, disabled: disabled %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :mobile_number %>
-    <%= form.text_field :mobile_number %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_area :address %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

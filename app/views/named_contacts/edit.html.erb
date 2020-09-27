@@ -1,1 +1,13 @@
-<%= render 'form', named_contact: @named_contact %>
+<%= form_with(model: @named_contact, local: true, url: named_contacts_path(case_id: @named_contact.case_id)) do |form| %>
+
+  <section class="named-contact-card">
+    <h1 class="named-contact-card__header">Named contact for case #<%= @named_contact.case_id %></h1>
+
+    <%= render 'form', form: form %>
+
+    <div class="named-contact-card__actions">
+      <%= form.submit 'Update', class: "named-contact-card__button named-contact-card__button--primary" %>
+    </div>
+  </section>
+
+<% end %>

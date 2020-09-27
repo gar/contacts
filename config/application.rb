@@ -32,8 +32,8 @@ module Contacts
     # Don't generate system test files.
     config.generators.system_tests = nil
 
-    config.skip_auth = ENV.has_key?('SKIP_AUTH') && (Rails.env.development? || Rails.env.test?)
     config.jwt = config_for(:jwt)
+    config.skip_auth = Rails.env.development? && ENV.has_key?('SKIP_AUTH')
 
     config.filter_parameters += %w[
       named_contact.title

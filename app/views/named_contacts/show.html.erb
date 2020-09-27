@@ -1,3 +1,14 @@
-<%= @named_contact.inspect %>
+<%= form_with(model: @named_contact, local: true, url: named_contacts_path(case_id: @named_contact.case_id)) do |form| %>
 
-<%= button_to('Delete named contact', named_contacts_path(case_id: @named_contact.case_id), method: :delete) %>
+  <section class="named-contact-card">
+    <h1 class="named-contact-card__header">Named contact for case #<%= @named_contact.case_id %></h1>
+
+    <%= render 'form', form: form, disabled: true %>
+
+    <div class="named-contact-card__actions">
+      <%= button_to('Delete', named_contacts_path(case_id: @named_contact.case_id), method: :delete, class: "named-contact-card__button", data: { confirm: 'Are you sure you want to permanently delete this named contact?' }) %>
+      <%= link_to('Edit', edit_named_contact_path(case_id: @named_contact.case_id), class: "named-contact-card__button named-contact-card__button--primary") %>
+    </div>
+  </section>
+
+<% end %>

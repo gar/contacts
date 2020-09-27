@@ -21,7 +21,7 @@ class NamedContactsController < ApplicationController
     if @named_contact.save
       log_action(:created, @named_contact)
       redirect_to named_contact_path(case_id: @named_contact.case_id),
-                  notice: 'Named contact was successfully created.'
+                  notice: 'Named contact was created successfully'
     else
       render :new
     end
@@ -31,7 +31,7 @@ class NamedContactsController < ApplicationController
     if @named_contact.update(named_contact_params)
       log_action(:updated, @named_contact)
       redirect_to named_contact_path(case_id: @named_contact.case_id),
-                  notice: 'Named contact was successfully updated.'
+                  notice: 'Named contact was updated successfully'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class NamedContactsController < ApplicationController
     log_action(:deleted, @named_contact)
 
     redirect_to new_named_contact_path(case_id: params[:case_id]),
-                notice: 'Named contact was successfully destroyed.'
+                notice: 'Named contact was deleted successfully'
   end
 
   private

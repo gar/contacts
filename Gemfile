@@ -38,6 +38,7 @@ group :development, :test do
   gem 'guard-rspec', '~> 4.7.3', require: false
   gem 'rspec-rails', '~> 4.0.1'
   gem 'simplecov', '~> 0.19.0', require: false
+  gem 'capybara', '~> 3.33.0'
 end
 
 group :development do

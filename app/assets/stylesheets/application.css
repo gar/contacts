@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: hsl(214, 15%, 91%);
+  color: hsl(212, 56%, 16%);
+  font-family: -apple-system, "Segoe UI", Roboto, Noto Sans, Ubuntu, Cantarell, "Helvetica Neue";
+}
+
+.notice {
+  background-color: hsl(209, 14%, 37%);
+  border: 2px solid hsl(210, 16%, 82%);
+  border-radius: 10px;
+  color: white;
+  margin: 15px auto;
+  max-width: 40%;
+  padding: 10px 10px;
+  text-align: center;
+  font-weight: bold;
+}
