@@ -4,6 +4,8 @@ Some customers may not be able to manage their own communication and they want t
 
 Privacy is at the core of this app and a full Audit Log is kept of access to the named contacts, while making sure that no PII is stored. Autentication happens via a JWT token in the request headers.
 
+![Screenshot of the Named Contacts app](./screenshot.png)
+
 
 ## Development
 
